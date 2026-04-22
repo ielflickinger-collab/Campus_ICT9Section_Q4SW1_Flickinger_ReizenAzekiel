@@ -1,0 +1,66 @@
+<style>
+    body {
+      font-family: Arial;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: URL("SCBG.jpg");
+      background-size: cover;
+    }
+    .login{
+    color: black;
+	border: 2px black;
+	padding: 75px;
+	box-shadow: 0 4px 8px;
+	background-color: black;
+	color: white;
+	font-size: 25px;
+	border-radius: 1000px;
+	text-align: center;
+    }
+    input{
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 8px;
+    }
+    button{
+      width: 100%;
+      padding: 10px;
+      background: #007BFF;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="login">
+  <h2>Heavenbreaker Saddle Authentication</h2>
+  <input type="text" id="username" placeholder="Username">
+  <input type="text" id="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+  <p id="message"></p>
+</div>
+
+<script>
+  function login(){
+    var user = document.getElementById("username").value;
+    var pass = document.getElementById("password").value;
+
+//Username and Password are based off the novel "HEAVENBREAKER" by Sara Wolf (Yahh I'm a nerd)"
+    if (user === "BraveRabbit7" && pass === "Hauteclare"){
+      document.getElementById("message").innerText = "Identification recognized.";
+      alert("Welcome back, Synali")
+    }
+    else{
+      document.getElementById("message").innerText = "[[ERR]]Rider identification not recognized within database[[ERR]]";
+      alert("You are not Synali...")
+    }
+  }
+</script>
+
+</body>
+</html>
